@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="logo icon" type="image/png" href="..\Images\M-logo.png" />
+        <title>Meditracker | Admin Home</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <style>
+            .container{
+                color: #31578F
+            }
+            .logo {
+                font-size: 200px;
+                color: #31578F;
+            }
+            .carousel-inner img {
+
+                width: 70%; /* Set width to 100% */
+                margin: auto;
+            }
+            .carousel-caption h3 {
+                color: #fff !important;
+            }
+            @media (max-width: 600px) {
+                .carousel-caption {
+                    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+                }
+            }
+            .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+                color: #fff;
+                background-color: #103F67;
+            }
+            .navbar-inverse {
+                background-color: #31578F;
+            }
+            #head{
+                color: #F5F5F5;
+            }
+            .navbar-inverse .navbar-nav>li>a {
+                color: #fff;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header active">
+                    <a class="navbar-brand" href="..\Common\HomePage.html" style="color:white">Medi Tracker</a>
+                </div>
+
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../Admin/AdminHome.html">List of Hospitals and Doctors</a></li>
+                    <li><a href="../Admin/Add Hospitals.html">Add Hospitals</a></li>
+                    <!--                    <li><a href="..\Users\MakeAnAppointment.html">Make An Appointment</a></li>-->
+                    <li><a href="..\Common\ContactUs.html">Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../Common/HomePage.html"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <form class="form-horizontal" role="form" action="action_page.php">
+                <h2>List of hospitals</h2>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="time">City:</label>
+                    <div class="col-sm-4">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Maryille
+                                <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="">Kansas</a></li>
+                                <li><a href="">Maryille</a></li>
+                                <li><a href="">Saint Joseph</a></li>
+                                <li><a href="">St. Louis</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn btn-default"><a href="../Admin/ViewHospitals.html">Submit</a></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--
+        <div class="container">
+            <h2 class="text-center">Hospital List</h2>
+            <div class="row">
+                <div class="col-sm-3" style="background-color:lavenderblush;"><b>Hospital Name</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>Location</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>Hours of Operation</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>Contact Information</b></div>
+                <div class="col-sm-1" style="background-color:lavenderblush;"><b>Edit</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>Doctor Details</b></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3" style="background-color:lavender;">
+                    St. Francis Hospital and Health Services</div>
+                <div class="col-sm-2" style="background-color:lavender;">2016 South Main Street</div>
+                <div class="col-sm-2" style="background-color:lavender;">Open 24 hours</div>
+                <div class="col-sm-2" style="background-color:lavender;">(660)562-2600</div>
+                <div class="col-sm-1" style="background-color:lavender;"><a href="../Admin/UpdateHospitalDetails.html">Edit</a></div>
+                <div class="col-sm-2" style="background-color:lavender;">
+                    <a href="../Admin/U.html">View</a>
+                    <a href="../Admin/UpdateHospitalDetails.html">Add</a>
+                    <a href="../Admin/UpdateHospitalDetails.html">Edit</a>
+                    <a href="../Admin/UpdateHospitalDetails.html">Remove</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3" style="background-color:lavender;">
+                    Northwest Hospital</div>
+                <div class="col-sm-2" style="background-color:lavender;">800 University Drive</div>
+                <div class="col-sm-2" style="background-color:lavender;">M-F(9am to 5pm)</div>
+                <div class="col-sm-2" style="background-color:lavender;">(660)162-7600</div>
+                <div class="col-sm-1" style="background-color:lavender;"><a href="../Admin/UpdateHospitalDetails.html">Edit</a></div>
+                <div class="col-sm-2" style="background-color:lavender;">
+                    <a href="../Admin/U.html">View</a>
+                    <a href="../Admin/UpdateHospitalDetails.html">Add</a>
+                    <a href="../Admin/UpdateHospitalDetails.html">Edit</a>
+                    <a href="../Admin/UpdateHospitalDetails.html">Remove</a>
+                </div>
+            </div>
+        </div>
+        !-->
+        <div class="container">
+            <h2 class="text-center">Hospital List</h2>
+            <div class="row">
+                <div class="col-sm-3" style="background-color:lavenderblush;"><b>Hospital Name</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>Location</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>Hours of Operation</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>Contact Information</b></div>
+                <div class="col-sm-1" style="background-color:lavenderblush;"><b>Edit</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>Doctor Details</b></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <input type="text" class="form-control input-sm" id="hospitalName" placeholder="St. Francis Hospital and Health Services">
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" id="hospitalAddress" placeholder="2016 South Main Street">
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" id="hospitalAddress" placeholder="Open 24 hours">
+                </div>
+                <div class="col-sm-2" >
+                    <input type="text" class="form-control input-sm" id="hospitalAddress" placeholder="(660)562-2600">
+                </div>
+                <div class="col-sm-1">
+
+                    <a href="../Admin/AdminHome.html">Update</a>
+                    <a href="../Admin/AdminHome.html">Cancel</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="../Admin/UpdateDoctors.html">View or Update</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3" style="background-color:lavender;">
+                    Northwest Hospital</div>
+                <div class="col-sm-2" style="background-color:lavender;">800 University Drive</div>
+                <div class="col-sm-2" style="background-color:lavender;">M-F(9am to 5pm)</div>
+                <div class="col-sm-2" style="background-color:lavender;">(660)162-7600</div>
+                <div class="col-sm-1" style="background-color:lavender;"><a href="../Admin/UpdateHospitalDetails.html">Edit</a></div>
+                <div class="col-sm-2" style="background-color:lavender;">
+                    <a href="../Admin/UpdateDoctors.html">View or Update</a>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

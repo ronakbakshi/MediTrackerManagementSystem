@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="logo icon" type="image/png" href="..\Images\M-logo.png" />
+        <title>Meditacker | Sign up</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="SignupUserOrDoc.js" type="text/javascript"></script>
+        <style>
+            .container{
+                color: #31578F
+            }
+            .logo {
+                font-size: 200px;
+                color: #31578F;
+            }
+            .carousel-inner img {
+
+                width: 70%; /* Set width to 100% */
+                margin: auto;
+            }
+            .carousel-caption h3 {
+                color: #fff !important;
+            }
+            @media (max-width: 600px) {
+                .carousel-caption {
+                    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+                }
+            }
+            .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+                color: #fff;
+                background-color: #103F67;
+            }
+            .navbar-inverse {
+                background-color: #31578F;
+            }
+            .navbar-inverse .navbar-nav>li>a {
+                color: #fff;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="..\Common\HomePage.html" style="color:white">Medi Tracker</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <!--                    <li><a href="HomePage.html">Home</a></li>
+                                        <li><a href="..\Users\HospitalList.html">List of Hospitals and Doctors</a></li>
+                                        <li><a href="..\Users\MakeAnAppointment.html">Make An Appointment</a></li>-->
+                    <li><a href="..\Common\ContactUs.html">Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="..\Common\SignUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="..\Common\Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+
+            <h2>Sign Up</h2>
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="alert alert-info" id="alertUserSignUp" style="display:none">
+
+            </div>
+                </div>
+                <div class="col-sm-3">
+                     <div class="alert alert-danger" id="mandatoryFields">
+                <strong>All the input fields are mandatory</strong>
+            </div>
+                </div>
+            </div>
+            
+           
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">User Sign Up</a></li>
+                <li><a data-toggle="tab" href="#menu1">Doctor Sign Up</a></li>
+            </ul>
+            <br>
+            <br>
+
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <div class="alert alert-danger" role="alert" style="display: none" id="messageText"></div>
+                    <form class="form-horizontal" role="form" action="action_page.php">
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="fName">First name:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="fName" placeholder="Enter first name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="lName">Last name:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="lName" placeholder="Enter last name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="gender">Gender:</label>
+                            <div class="col-sm-4">
+                                <label class="radio-inline active">    
+                                    <input type="radio" id="male" name="gender" value="Male" checked="">Male</label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="female" value="Female" name="gender">Female</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="dob">Date of Birth:</label>
+                            <div class="col-sm-4">
+                                <input type="date" class="form-control" id="dob">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="name">Username:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="email" placeholder="Enter username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwd">Password:</label>
+                            <div class="col-sm-4">          
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwd">Confirm password:</label>
+                            <div class="col-sm-4">          
+                                <input type="password" class="form-control" id="cpwd" placeholder="Enter password">
+                            </div>
+                        </div>
+
+                        <div class="form-group">        
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" id="registerBTNUser" class="btn btn-default">Submit</button>
+                            </div>
+                        </div>
+
+                    </form>    
+                </div>
+
+
+
+
+
+                <div id="menu1" class="tab-pane fade">
+                    <div class="alert alert-danger" role="alert" style="display: none" id="messageTextDoc"></div>
+                    <form class="form-horizontal" role="form" action="action_page.php">
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="fNameDoc">First name:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="fNameDoc" placeholder="Enter first name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="lNameDoc">Last name:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="lNameDoc" placeholder="Enter last name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="genderDoc">Gender:</label>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">    
+                                    <input type="radio" name="genderDoc" id="male1" class="active" checked="">Male</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="genderDoc" id="female1">Female</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="dobDoc">Date of Birth:</label>
+                            <div class="col-sm-4">
+                                <input type="date" class="form-control" id="dobDoc">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="specialization">Specialization:</label>
+                            <div class="col-sm-4">
+                                <textarea class="form-control" id="specialization" rows="3" placeholder="Enter description"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="location">Location:</label>
+                            <div class="col-sm-4">
+                                <textarea class="form-control" id="location" rows="2" placeholder="Enter location"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="timings">Available timings:</label>
+                            <div class="col-sm-4">
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>Morning Shift<br>(8am to 4pm)</th>
+                                            <th>Evening Shift<br>(4pm to 12am)</th>
+                                            <th>Night Shift<br>(12am to 8am)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><label class="radio-inline">
+                                                    <input id="morning" type="radio" name="timings" value="Morning" class="active" checked="">
+                                                </label>
+                                            </td>
+                                            <td><label class="radio-inline">
+                                                    <input id="evening" type="radio" name="timings" value="Evening">
+                                                </label>
+                                            </td>
+                                            <td><label class="radio-inline">
+                                                    <input id="night" type="radio" name="timings" value="Night">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="hName">Hospital name:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="hName" placeholder="Enter hospital name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="emailDoc">Username:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="emailDoc" placeholder="Enter username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwdDoc">Password:</label>
+                            <div class="col-sm-4">          
+                                <input type="password" class="form-control" id="pwdDoc" placeholder="Enter password">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwdDoc">Confirm password:</label>
+                            <div class="col-sm-4">          
+                                <input type="password" class="form-control" id="cpwdDoc" placeholder="Enter password">
+                            </div>
+                        </div>
+
+                        <div class="form-group">        
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" id="registerBTNDoctor" class="btn btn-default">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="logo icon" type="image/png" href="..\Images\M-logo.png" />
+        <title>Meditracker | Appointment Status</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="AppointmentHistory.js" type="text/javascript"></script>
+        <style>
+            .container{
+                color: #31578F
+            }
+            .logo {
+                font-size: 200px;
+                color: #31578F;
+            }
+            .carousel-inner img {
+
+                width: 70%; /* Set width to 100% */
+                margin: auto;
+            }
+            .carousel-caption h3 {
+                color: #fff !important;
+            }
+            @media (max-width: 600px) {
+                .carousel-caption {
+                    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+                }
+            }
+            .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+                color: #fff;
+                background-color: #103F67;
+            }
+            .navbar-inverse {
+                background-color: #31578F;
+            }
+            #head{
+                color: #F5F5F5;
+            }
+            .navbar-inverse .navbar-nav>li>a {
+                color: #fff;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="..\Common\HomePage.html" style="color:white">Medi Tracker</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../Users/UserHomeAppointmentStatus.html">Appointment History</a></li>
+                    <li><a href="..\Users\HospitalList.html">List of Hospitals and Doctors</a></li>
+                    <li><a  id="makeAppointmentID">Make An Appointment</a></li>
+                    <li><a href="..\Common\ContactUs.html">Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../Users/EditProfile.html"><span class="glyphicon glyphicon-user"></span>Edit Profile</a></li>
+                    <li><a href="../Common/HomePage.html"><span class="glyphicon glyphicon-user"></span>Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="container">
+            
+            <h3>Appointment History(Arranged in descending order of Appointment Date)</h3>
+            <br>
+            
+            <div class="row">
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>Appointment ID</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>Doctor Name</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>Hospital Name</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>Appointment Date</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>Appointment Time</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>Appointment Status</b></div>
+            </div>
+            <div class="row" style="background-color:lavenderblush;">
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b></b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b></b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>(YYYY-MM-DD)</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b>(24 hours format)</b></div>
+                <div class="col-sm-2" style="background-color:lavenderblush;"><b></b></div>
+            </div>
+            <div id="divAppointment">
+                <div class="row" id="divAppointments">
+                <!--                <div class="col-sm-3" style="background-color:lavender;">
+                                    Dr. Brandon Davis, MD
+                                </div>
+                                <div class="col-sm-3" style="background-color:lavender;">St. Francis Hospital and Health Services</div>
+                                <div class="col-sm-2" style="background-color:lavender;">04/30/2016</div>
+                                <div class="col-sm-2" style="background-color:lavender;">12:30</div>
+                                <div class="col-sm-2" style="background-color:lavender;">Waiting for approval</div>-->
+
+            </div>
+            </div>
+            <div class="row" id="2">
+<!--                <div class="col-sm-3" style="background-color:lavender;">
+                    Dr. Stuart Krein, MD
+                </div>
+                <div class="col-sm-4" style="background-color:lavender;">St. Francis Hospital and Health Services</div>
+                <div class="col-sm-2" style="background-color:lavender;">03/10/2016</div>
+                <div class="col-sm-3" style="background-color:lavender;">Approved</div>-->
+            </div>
+            <div class="row" id="3">
+<!--                <div class="col-sm-3" style="background-color:lavender;">
+                    Dr. Sudarsan, MD
+                </div>
+                <div class="col-sm-4" style="background-color:lavender;">St. Francis Hospital and Health Services</div>
+                <div class="col-sm-2" style="background-color:lavender;">02/01/2016</div>
+                <div class="col-sm-3" style="background-color:lavender;">Approved</div>-->
+            </div>
+            <div class="row" id="4">
+<!--                <div class="col-sm-3" style="background-color:lavender;">
+                    Dr. Sally Bomar, MD
+                </div>
+                <div class="col-sm-4" style="background-color:lavender;">St. Francis Hospital and Health Services</div>
+                <div class="col-sm-2" style="background-color:lavender;">12/25/2016</div>
+                <div class="col-sm-3" style="background-color:lavender;">Denied</div>-->
+
+            </div>
+
+        </div>
+    </body>
+</html>

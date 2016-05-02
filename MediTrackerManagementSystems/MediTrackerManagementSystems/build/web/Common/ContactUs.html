@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="logo icon" type="image/png" href="..\Images\M-logo.png" />
+        <title>Meditacker | Contact Us</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <style>
+            .container{
+                color: #31578F
+            }
+            .logo {
+                font-size: 200px;
+                color: #31578F;
+            }
+            .carousel-inner img {
+
+                width: 70%; /* Set width to 100% */
+                margin: auto;
+            }
+            .carousel-caption h3 {
+                color: #fff !important;
+            }
+            @media (max-width: 600px) {
+                .carousel-caption {
+                    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+                }
+            }
+            .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+                color: #fff;
+                background-color: #103F67;
+            }
+            .navbar-inverse {
+                background-color: #31578F;
+            }
+            .navbar-inverse .navbar-nav>li>a {
+                color: #fff;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="..\Common\HomePage.html" style="color:white">Medi Tracker</a>
+                </div>
+                <ul class="nav navbar-nav">
+<!--                    <li><a href="..\Common\HomePage.html">Home</a></li>-->
+<!--                    <li><a href="..\Users\HospitalList.html">List of Hospitals and Doctors</a></li>
+                    <li><a href="..\Users\MakeAnAppointment.html">Make An Appointment</a></li>-->
+                    <li class="active"><a href="..\Common\ContactUs.html">Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="..\Common\SignUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="..\Common\Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+
+            <h2>Contact Us</h2>
+            <div class="row">
+                <div class="col-sm-5">
+                    <p>Contact us and we'll get back to you within 24 hours.</p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> 800 University Drive | Maryville, MO 64468</p>
+                    <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> meditracker@mail.meditracker.com</p>	   
+                </div>
+                <div class="col-sm-7 slideanim">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-default pull-right" type="submit">Send</button>
+                        </div>
+                    </div>	
+                </div>
+            </div>
+            <div id="googleMap" style="height:400px;width:100%;"></div>
+
+            <!-- Add Google Maps -->
+            <script src="http://maps.googleapis.com/maps/api/js"></script>
+            <script>
+                var myCenter = new google.maps.LatLng(40.35192,	-94.88381);
+
+                function initialize() {
+                    var mapProp = {
+                        center: myCenter,
+                        zoom: 12,
+                        scrollwheel: false,
+                        draggable: false,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+
+                    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+                    var marker = new google.maps.Marker({
+                        position: myCenter,
+                    });
+
+                    marker.setMap(map);
+                }
+
+                google.maps.event.addDomListener(window, 'load', initialize);
+            </script>
+
+        </div>
+    </body>
+</html>

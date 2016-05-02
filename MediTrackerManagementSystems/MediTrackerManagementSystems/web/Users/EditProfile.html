@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="logo icon" type="image/png" href="..\Images\M-logo.png" />
+        <title>Meditacker | Edit User Profile</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <style>
+            .container{
+                color: #31578F
+            }
+            .logo {
+                font-size: 200px;
+                color: #31578F;
+            }
+            .carousel-inner img {
+
+                width: 70%; /* Set width to 100% */
+                margin: auto;
+            }
+            .carousel-caption h3 {
+                color: #fff !important;
+            }
+            @media (max-width: 600px) {
+                .carousel-caption {
+                    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+                }
+            }
+            .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+                color: #fff;
+                background-color: #103F67;
+            }
+            .navbar-inverse {
+                background-color: #31578F;
+            }
+            #head{
+                color: #F5F5F5;
+            }
+            .navbar-inverse .navbar-nav>li>a {
+                color: #fff;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <<a class="navbar-brand" href="..\Common\HomePage.html" style="color:white">Medi Tracker</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="../Users/UserHomeAppointmentStatus.html">Appointment History</a></li>
+                    <li><a href="..\Users\HospitalList.html">List of Hospitals and Doctors</a></li>
+                    <li><a href="..\Users\MakeAnAppointment.html">Make An Appointment</a></li>
+                    <li><a href="..\Common\ContactUs.html">Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="../Users/EditProfile.html"><span class="glyphicon glyphicon-user"></span>Edit Profile</a></li>
+                    <li><a href="..\Common\SignUp.html"><span class="glyphicon glyphicon-user"></span>Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h2>Edit profile</h2>  
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="alert alert-info" id="alertUserSignUp" style="display:none">
+                        Profile has been updated sucessfully.
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="alert alert-danger" id="mandatoryFields">
+                        <strong>All the input fields are mandatory</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div id="menu1" >
+                <form class="form-horizontal" role="form" action="action_page.php">
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="fName">First name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="fName" placeholder="Enter first name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="lName">Last name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="lName" placeholder="Enter last name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="gender">Gender:</label>
+                        <div class="col-sm-4">
+                            <label class="radio-inline">    
+                                <input type="radio" name="male">Male</label>
+                            <label class="radio-inline">
+                                <input type="radio" name="female">Female</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="dob">Enter Date of Birth:</label>
+                        <div class="col-sm-4">
+                            <input type="date" class="form-control" id="dob">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-4">
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="pwd">Password:</label>
+                        <div class="col-sm-4">          
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="pwd">Confirm password:</label>
+                        <div class="col-sm-4">          
+                            <input type="password" class="form-control" id="cpwd" placeholder="Enter password">
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn btn-default" onclick="myFunction()">Update</button>
+                        <script>
+                            function myFunction() {
+                                $("#alertUserSignUp").css("display", "block");
+                            }
+                        </script>
+
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <!--                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" class="close" data-dismiss="modal">X</button>
+                                                                        <h4><span class="glyphicon glyphicon-lock"></span> Profile successfully updated!</h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <form role="form">
+                                                                            <div class="form-group">
+                                                                                <label for="usrname"><span class="glyphicon glyphicon-user"></span> The profile has been updated successfully.</label>
+                                                                            </div>
+                                                                            <button type="submit" class="btn btn-block">ok
+                                                                                <span class="glyphicon glyphicon-ok"></span>
+                                                                            </button>
+                                
+                                                                        </form>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                                                                            <span class="glyphicon glyphicon-remove"></span> Cancel
+                                                                        </button>
+                                                                    </div>
+                                                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>

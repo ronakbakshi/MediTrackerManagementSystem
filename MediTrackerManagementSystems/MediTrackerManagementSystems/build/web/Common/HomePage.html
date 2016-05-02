@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="logo icon" type="image/png" href="..\Images\M-logo.png" />
+        <title>Meditracker | Home</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <style>
+
+            .carousel-caption h3 {
+                color: #103F67 !important;
+            }
+            .carousel-caption p {
+                color: #103F67;
+            }
+            .container{
+                color: #31578F;
+            }
+
+            .logo {
+                font-size: 200px;
+                color: #31578F;
+            }
+            .carousel-inner img {
+
+                width: 70%; /* Set width to 100% */
+                margin: auto;
+            }
+
+            @media (max-width: 600px) {
+                .carousel-caption {
+                    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+                }
+            }
+            .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+                color: #fff;
+                background-color: #103F67;
+            }
+            .navbar-inverse {
+                background-color: #31578F;
+            }
+            .navbar-inverse .navbar-nav>li>a {
+                color: #fff;
+            }
+
+
+            .carousel {
+                position: relative;
+                margin-top: -1.5em;
+            }
+        </style>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header active">
+                    <a class="navbar-brand" href="..\Common\HomePage.html" style="color:white">Medi Tracker</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    
+                    
+                    <li><a href="..\Common\ContactUs.html">Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="..\Common\SignUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="..\Common\Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="..\Images\hospitalpatient.jpg" alt="Care" width="1000" height="300">
+                    <div class="carousel-caption">
+                        <h3>Choice of Doctor</h3>
+                        <p>Protect yourself and your family with your own choice of doctor</p>
+                    </div>      
+                </div>
+
+                <div class="item">
+                    <img src="..\Images\hospital3.jpg" alt="Facilities" width="1000" height="300">
+                    <div class="carousel-caption">
+                        <h3>Choice of Services</h3>
+                        <p>Think about your insurance plan and choose the kind of services required</p>
+                    </div>      
+                </div>
+
+                <div class="item">
+                    <img src="..\Images\management.jpg" alt="Management" width="1000" height="400">
+                    <div class="carousel-caption">
+                        <h3>Communicate directly</h3>
+                        <p>Directly get in touch with the hospital management to get more knowledge</p>
+                    </div>      
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="container">
+            <div class="col-sm-12">
+                <h2>About Us</h2>
+                <p>
+                    Medi Tracker has been part of most of the hospitals in Missouri since April, 2016. Our name 
+                    reflects the relationship with this recognized health system, as well as our tradition of providing 
+                    compassionate medical care to residents of United States. We are a trusted member of the 
+                    community, with the same people and the same mission of exceptional 
+                    care and compassion. This is more than a name, this is our promise to you that in every single 
+                    interaction you have with us, you can insist on and expect an exceptional experience.
+                    Medi Tracker is a fully accredited, full-service health care organization. We provide acute treatment
+                    for residents.
+                    <br>
+
+                    We pledge to treat all patients without regard to race, color, religion, 
+                    national origin, handicap, age or ability to pay.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <br>
+                    <br>
+                    <br>
+                    <!--                    <span class="glyphicon glyphicon-globe logo slideanim"></span>-->
+                    <img src="../Images/M-logo.png" alt="Logo" width="300" height="300">
+
+                </div>
+                <div class="col-sm-8">
+                    <h2>Our Values</h2><br>
+                    <h4><strong>MISSION:</strong></h4><p> <br>At Medi Tracker we recognize the value of every person and are guided by our commitment 
+                        to excellence and leadership. We demonstrate this by: <br>* Providing exemplary physical, emotional and spiritual care for 
+                        each of our patients and their families. <br>* Balancing the continued commitment to the care of the poor and those most in 
+                        need with the provision of highly specialized services to a broader community. <br>* Building a work environment where each 
+                        person is valued, respected and has an opportunity for personal and professional growth. <br>* Advancing excellence in health 
+                        services education. <br>* Fostering a culture of discovery in all of our activities and supporting exemplary health sciences 
+                        research. <br>* Strengthening our relationships with universities, colleges, other hospitals, agencies and our community. <br>* 
+                        Demonstrating social responsibility through the just use of our resources. The commitment of our staff, physicians, 
+                        volunteers, students, community partners and friends to our mission permits us to maintain a 
+                        quality of presence and tradition of caring, which are the hallmarks of Medi Tracker.<br></p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
