@@ -26,3 +26,6 @@ Doctor:
 •	The implemented application works in the same way. The user, the doctor and admin roles are assigned and actions are performed in the given sequence.
 
 •	Add, delete, modify, register functionalities should work properly and all updates should reflect on respective screens.
+
+This application was developed using the MVC framework.
+The technologies used are: Java SE 8, jQuery, AJAX, Servlets, mySQL community Server 8.0 
